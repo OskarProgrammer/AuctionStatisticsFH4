@@ -14,8 +14,8 @@
     }
   ],
   "currentUser": {
-    "id": "1",
-    "isLogged": true
+    "id": "",
+    "isLogged": false
   },
   "auctions": []
 }
