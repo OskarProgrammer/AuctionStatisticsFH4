@@ -14,6 +14,9 @@ export const NavBar = () => {
                         <NavLink to="/account/yourAuctions" className="btn btn-outline-dark btn-md fw-bold">
                             Your auctions
                         </NavLink>
+                        <NavLink to="/account/yourHistory" className="btn btn-outline-dark btn-md fw-bold">
+                            Your previous auctions
+                        </NavLink>
                     </div>
                     <div className="container text-end col-lg-4 col-md-4 col-sm-2">
                         <Link to="/account/logOut" className="btn btn-outline-danger btn-md fw-bold">
