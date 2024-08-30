@@ -12,6 +12,9 @@ import MainPage, { mainPageLoader } from './pages/MainPage'
 import LoginPage, { loginAction } from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
 import { LogOutPage, logOut } from './pages/LogOutPage'
+import { AccountLayout } from './layouts/AccountLayout'
+import { AccountDetails, accountDetailsLoader } from './pages/AccountDetails'
+import { newAuctionAction, NewAuctionPage } from './pages/NewAuctionPage'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,7 +22,12 @@ const router = createBrowserRouter(
       <Route index element={<MainPage />} loader={mainPageLoader}/>
       <Route path="/login" element={<LoginPage/>} action={loginAction}/>
       <Route path="/register" element={<RegisterPage/>}/>
-      <Route path="/logOut" element={<LogOutPage/>} loader={logOut}/>
+      
+      <Route path="/account/" element={<AccountLayout/>} >
+        <Route path="details" element={<AccountDetails/>} loader={accountDetailsLoader}/>
+        <Route path="logOut" element={<LogOutPage/>} loader={logOut} />
+        <Route path="newAuction" element={<NewAuctionPage/>} action={newAuctionAction}/>
+      </Route>
     </Route>
   )
 )
