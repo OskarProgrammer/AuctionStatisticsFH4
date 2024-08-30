@@ -6,23 +6,21 @@ export const AccountDetails = () => {
 
 
     const successAuctions = parseInt(user.soldCars)
-    const failedAuctions = parseInt(user.allAuctions) - parseInt(user.soldCars)
+    const failedAuctions = parseInt(user.failedAuctions)
+    const allAuctions = parseInt(user.allAuctions)
 
     return (
-        <div className="container col-lg-6 col-md-6 bg-light my-4 p-5 rounded">
-            <h3 className="display-6 text-center">{user.name}</h3>
-            <div className="container col-lg-12 d-flex row text-center p-3">
-                <div className="container col-lg-6 col-md-5 col-sm-5">
-                    <h4>Sold cars: {successAuctions}</h4> 
-                </div>
-                <div className="container col-lg-6 col-md-5 col-sm-5">
-                    <h4>Failed auctions: {failedAuctions}</h4>
-                </div>
+        <div className="container col-lg-6 col-md-6 bg-light my-5 py-1 rounded">
+            <h1 className="display-4 text-center fw-bold">{user.name}</h1>
+            <div className="container col-lg-6 text-center text-light shadow-lg rounded bg-dark py-3 my-3">
+                <h4>Sold cars: {successAuctions}</h4> 
+                <h4>Failed auctions: {failedAuctions}</h4>
+                <h4>All auctions: {allAuctions}</h4>
             </div>
-            <div className="container col-lg-12 d-flex row text-center">
+            <div className="container col-lg-12 fs-4 d-flex flex-column text-center">
                 <p>Spent money: {parseInt(user.spentMoney)}</p>
-                <p>Lost money: {parseInt(user.spentMoney)}</p>
-                <p>Earned money: {parseInt(user.spentMoney)}</p>
+                <p>Lost money: {parseInt(user.lostMoney)}</p>
+                <p>Earned money: {parseInt(user.earnedMoney)}</p>
             </div>
         </div>
     )

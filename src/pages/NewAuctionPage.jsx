@@ -54,6 +54,7 @@ export const newAuctionAction = async ({request}) => {
     const userInfo = await getRequestId("http://localhost:3000/users/", currentUser.id)
     let newUserInfo = userInfo
     newUserInfo.spentMoney = parseInt(parseInt(userInfo.spentMoney) + parseInt(cost)) 
+    newUserInfo.allAuctions = parseInt(parseInt(userInfo.allAuctions) + 1)
 
     try {
         await putRequest(`http://localhost:3000/users/${userInfo.id}`, newUserInfo)
