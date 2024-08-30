@@ -3,11 +3,18 @@
     {
       "id": "1",
       "name": "Oskar",
-      "pass": "root"
+      "pass": "root",
+      "soldCars": "0",
+      "allAuctions": "0",
+      "spentMoney": 0,
+      "earnedMoney": 0,
+      "lostMoney": 0
     }
   ],
   "currentUser": {
     "id": "1",
     "isLogged": true
-  }
+  },
+  "auctions": [
+  ]
 }
