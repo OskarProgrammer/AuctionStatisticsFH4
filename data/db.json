@@ -5,8 +5,9 @@
       "name": "Oskar",
       "pass": "root",
       "soldCars": "0",
-      "allAuctions": "0",
-      "spentMoney": 0,
+      "allAuctions": 1,
+      "failedAuctions":0,
+      "spentMoney": 233634,
       "earnedMoney": 0,
       "lostMoney": 0
     }
@@ -16,5 +17,13 @@
     "isLogged": true
   },
   "auctions": [
+    {
+      "id": "b8f90a0f-e7f5-41e7-bd6f-fccb076a17d5",
+      "ownerId": "1",
+      "nameOfCar": "dsa",
+      "buyoutCost": "231",
+      "biddingValue": "321",
+      "cost": "2313"
+    }
   ]
 }
