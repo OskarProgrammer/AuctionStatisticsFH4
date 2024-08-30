@@ -16,6 +16,7 @@ import { LogOutPage, logOut } from './pages/LogOutPage'
 import { AccountDetails, accountDetailsLoader } from './pages/AccountDetails'
 import { newAuctionAction, NewAuctionPage } from './pages/NewAuctionPage'
 import { auctionListLoader, AuctionListPage } from './pages/AuctionListPage'
+import { AuctionHistory, auctionHistoryLoader } from './pages/AuctionHistory'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -46,6 +47,10 @@ const router = createBrowserRouter(
           <Route path="yourAuctions" 
                  element={<AuctionListPage/>} 
                  loader={auctionListLoader}/>
+
+          <Route path="yourHistory" 
+                 element={<AuctionHistory/>} 
+                 loader={auctionHistoryLoader}/>
 
       </Route>
     </Route>
