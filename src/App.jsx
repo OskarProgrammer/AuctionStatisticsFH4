@@ -11,7 +11,7 @@ import { AccountLayout } from './layouts/AccountLayout'
 //pages
 import MainPage, { mainPageLoader } from './pages/MainPage'
 import LoginPage, { loginAction } from './pages/LoginPage'
-import RegisterPage from './pages/RegisterPage'
+import RegisterPage, { registerAction } from './pages/RegisterPage'
 import { LogOutPage, logOut } from './pages/LogOutPage'
 import { AccountDetails, accountDetailsLoader } from './pages/AccountDetails'
 import { newAuctionAction, NewAuctionPage } from './pages/NewAuctionPage'
@@ -30,7 +30,8 @@ const router = createBrowserRouter(
              action={loginAction}/>
 
       <Route path="/register" 
-             element={<RegisterPage/>}/>
+             element={<RegisterPage/>}
+             action={registerAction}/>
       
       <Route path="/account/" element={<AccountLayout/>} >
 
