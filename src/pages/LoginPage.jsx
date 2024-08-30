@@ -51,7 +51,7 @@ export const loginAction = async ({request}) => {
         return {error: "Something went wrong on the server side"}
     }
 
-    return redirect("/")
+    return redirect("/account")
 }
 
 
