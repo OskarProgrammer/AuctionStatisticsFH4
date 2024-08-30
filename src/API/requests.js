@@ -50,3 +50,16 @@ export const postRequest = async (endpoint, payload) => {
         throw new Error("Put request went wrong")
     }
 }
+
+export const deleteRequest = async (endpoint, id) => {
+    const requestOptions = {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+    }
+
+    try {
+        await fetch(endpoint+id, requestOptions)
+    } catch {
+        throw new Error("Put request went wrong")
+    }
+}
