@@ -15,6 +15,7 @@ import RegisterPage from './pages/RegisterPage'
 import { LogOutPage, logOut } from './pages/LogOutPage'
 import { AccountDetails, accountDetailsLoader } from './pages/AccountDetails'
 import { newAuctionAction, NewAuctionPage } from './pages/NewAuctionPage'
+import { auctionListLoader, AuctionListPage } from './pages/AuctionListPage'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -36,13 +37,15 @@ const router = createBrowserRouter(
                   element={<AccountDetails/>} 
                   loader={accountDetailsLoader}/>
 
-          <Route  path="logOut" 
-                  element={<LogOutPage/>} 
-                  loader={logOut} />
+          <Route  path="logOut" element={<LogOutPage/>} loader={logOut} />
 
           <Route path="newAuction" 
                  element={<NewAuctionPage/>} 
                  action={newAuctionAction}/>
+          
+          <Route path="yourAuctions" 
+                 element={<AuctionListPage/>} 
+                 loader={auctionListLoader}/>
 
       </Route>
     </Route>
