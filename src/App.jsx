@@ -19,7 +19,7 @@ const router = createBrowserRouter(
       <Route index element={<MainPage />} loader={mainPageLoader}/>
       <Route path="/login" element={<LoginPage/>} action={loginAction}/>
       <Route path="/register" element={<RegisterPage/>}/>
-      <Route path="/logOut" element={<LogOutPage/>} laoder={logOut}/>
+      <Route path="/logOut" element={<LogOutPage/>} loader={logOut}/>
     </Route>
   )
 )

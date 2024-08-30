@@ -3,7 +3,7 @@ import { putRequest } from "../API/requests.js"
 
 export const LogOutPage = () => {
     const loaderData = useLoaderData()
-    redirect("/")
+    redirect(".")
 
     return(<></>)
 }
@@ -15,7 +15,7 @@ export const logOut = async () => {
     }
 
     try {
-        await putRequest("http://localhost:3000/currentUser/", newCurrent)
+        await putRequest("http://localhost:3000/currentUser", newCurrent)
     } catch {
         throw new Error("Logging out error")
     }
