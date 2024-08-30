@@ -9,8 +9,8 @@ const LoginPage = () => {
             <div className="container col-lg-4 bg-light my-5 p-3 rounded ">
                 <Form method="POST" action="/login" className="d-flex text-center flex-column">
                     <h3 className="display-5">Login form</h3>
-                    <input type="text" name="login" className="p-3 col-lg-5 mx-auto my-2 rounded-pill border-0 shadow-lg"/>
-                    <input type="password" name="pass" className="p-3 col-lg-5 mx-auto my-2 rounded-pill border-0 shadow-lg"/>
+                    <input type="text" name="login" placeholder="Login" className="p-3 col-lg-5 mx-auto my-2 rounded-pill border-0 shadow-lg"/>
+                    <input type="password" name="pass" placeholder="Password" className="p-3 col-lg-5 mx-auto my-2 rounded-pill border-0 shadow-lg"/>
                     <button className="btn btn-outline-success btn-lg m-4 col-lg-4 mx-auto fw-bold">Sign in</button>
                 </Form>
             </div>
