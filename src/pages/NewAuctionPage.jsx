@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Form, redirect } from "react-router-dom"
-import { getRequest, postRequest } from "../API/requests"
+import { getRequest, getRequestId, postRequest, putRequest } from "../API/requests"
 
 export const NewAuctionPage = () => {
     const [cost, setCost] = useState("")
@@ -49,6 +49,16 @@ export const newAuctionAction = async ({request}) => {
         await postRequest("http://localhost:3000/auctions/", newAuction)
     } catch {
         throw new Error("Error during creating auction")
+    }
+
+    const userInfo = await getRequestId("http://localhost:3000/users/", currentUser.id)
+    let newUserInfo = userInfo
+    newUserInfo.spentMoney = parseInt(parseInt(userInfo.spentMoney) + parseInt(cost)) 
+
+    try {
+        await putRequest(`http://localhost:3000/users/${userInfo.id}`, newUserInfo)
+    } catch {
+        throw new Error("Error during updating user")
     }
 
     return redirect("/account")
